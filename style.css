@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+}
+p{
+    position: absolute;
+    border: none;
+    color: rgb(0, 157, 255);
+    top: 35%;
+    left: 39%;
+    font-size: 15px;
+}
