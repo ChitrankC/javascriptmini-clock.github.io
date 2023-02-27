@@ -17,16 +17,19 @@ function showtime(){
         hour = hour-12;
         sham = "PM";
     }
-    hour = (hour<10)? "0" + hour: hour;
-    minute = (minute<10)? "0" + minute: minute;
-    second = (second<10)? "0" + second: second;
-    mili = (mili<10)? "0" + mili: mili;
-    hourEL.innerText = hour;
-    minuteEL.innerText = minute;
-    secondEL.innerText = second;
-    miliEL.innerText = mili;
+    
+    hourEL.innerText = formatTime(hour);
+    minuteEL.innerText = formatTime(minute);
+    secondEL.innerText = formatTime(second);
+    miliEL.innerText = formatTime(mili);
     shamEL.innerText = sham;
     setTimeout(showtime, 10); 
+}
+
+//function to add a 0 in a single digit number
+
+function formatTime(time) {
+	return time < 10 ? ( `0${time}` ) : time;
 }
 showtime();
 
